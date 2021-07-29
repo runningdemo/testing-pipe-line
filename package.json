@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/runningdemo/testing-pipe-line/issues"
   },
-  "homepage": "https://github.com/runningdemo/testing-pipe-line#readme"
+  "homepage": "https://github.com/runningdemo/testing-pipe-line#readme",
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "jest-cli": "^27.0.6"
+  }
 }

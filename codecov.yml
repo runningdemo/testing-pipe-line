@@ -1,0 +1,21 @@
+codecov:
+  require_ci_to_pass: yes
+  token: 0d272506-bca5-49f7-9d48-b5f14373b88d
+coverage:
+  precision: 2
+  round: nearest
+  range: "1...100"
+  status:
+    project:
+      default:
+        base: auto
+        target: auto
+        threshold: 0.1%
+        if_not_found: success
+
+comment:                  # this is a top-level key
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: false  # if true: only post the comment if coverage changes
+  require_base: no        # [yes :: must have a base report to post]
+  require_head: no       # [yes :: must have a head report to post]

@@ -26,8 +26,9 @@ workflows:
           executor: bigger-docker
           no-workspace: true
           # start: NODE_ENV=test && npm run start-staging-2
-          # wait-on: 'http://localhost:8000'
+          start: npm run dev
+          wait-on: 'http://localhost:8080'
           store_artifacts: true
-          command: npm run test
+          # command: npm run test
           post-steps:
             - report-coverage

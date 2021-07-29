@@ -1,0 +1,33 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+  codecov: codecov/codecov@1.2.3
+executors:
+  bigger-docker:
+    docker:
+      - image: 'cypress/base:10.22.0'
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Commands ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+commands:
+  report-coverage:
+    description: |
+      Store coverage report as an artifact and send it to Codecov service.
+    steps:
+      - store_artifacts:
+          path: coverage
+      # - run: npx nyc report --reporter=text || true
+      - codecov/upload:
+          file: coverage/coverage-final.json
+
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          executor: bigger-docker
+          no-workspace: true
+          # start: NODE_ENV=test && npm run start-staging-2
+          # wait-on: 'http://localhost:8000'
+          store_artifacts: true
+          command: npm run test
+          post-steps:
+            - report-coverage

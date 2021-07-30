@@ -2,6 +2,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     './add.js',
-    './sub.js',
-  ]
+  ],
+  coverageDirectory: 'jest-coverage',
+  modulePathIgnorePatterns: ["<rootDir>/cypress/"]
 }

@@ -15,7 +15,7 @@ commands:
     steps:
       - store_artifacts:
           path: coverage
-      # - run: npx nyc report --reporter=text || true
+      - run: npx nyc report --reporter=text || true
       - codecov/upload:
           file: coverage/coverage-final.json
 
@@ -25,10 +25,11 @@ workflows:
       - cypress/run:
           executor: bigger-docker
           no-workspace: true
-          # start: NODE_ENV=test && npm run start-staging-2
           start: npm run dev
           wait-on: 'http://localhost:8080'
           store_artifacts: true
-          # command: npm run test
+          command: npm run test:jest && npm run test:cypress
           post-steps:
+            - run: npm run report:combined
+            - run: mv .nyc_output/out.json coverage/coverage-final.json
             - report-coverage

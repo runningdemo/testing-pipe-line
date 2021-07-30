@@ -31,4 +31,5 @@ workflows:
           command: npm run test:jest && npm run test:cypress
           post-steps:
             - run: npm run report:combined
+            - run: mv .nyc_output/out.json coverage/coverage-final.json
             - report-coverage

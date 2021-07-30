@@ -1,28 +1,4 @@
 {
-  "/home/liang/workstream/testing-pipe-line/index.js": {
-    "path": "/home/liang/workstream/testing-pipe-line/index.js",
-    "statementMap": {
-      "0": {
-        "start": {
-          "line": 5,
-          "column": 0
-        },
-        "end": {
-          "line": 8,
-          "column": 2
-        }
-      }
-    },
-    "fnMap": {},
-    "branchMap": {},
-    "s": {
-      "0": 3
-    },
-    "f": {},
-    "b": {},
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "1ce16d764dacb2d2a1c19d92531201745d2e8b66"
-  },
   "/home/liang/workstream/testing-pipe-line/add.js": {
     "path": "/home/liang/workstream/testing-pipe-line/add.js",
     "statementMap": {
@@ -129,18 +105,42 @@
     },
     "branchMap": {},
     "s": {
-      "0": 2,
-      "1": 0,
-      "2": 2,
-      "3": 0,
-      "4": 2
+      "0": 5,
+      "1": 1,
+      "2": 5,
+      "3": 1,
+      "4": 5
     },
     "f": {
-      "0": 0,
-      "1": 0
+      "0": 1,
+      "1": 1
     },
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "c07b093c92705bec6ee2ff32a28eec3f25d63b6d"
+  },
+  "/home/liang/workstream/testing-pipe-line/index.js": {
+    "path": "/home/liang/workstream/testing-pipe-line/index.js",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 2
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 5
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "1ce16d764dacb2d2a1c19d92531201745d2e8b66"
   }
 }

@@ -6,4 +6,4 @@ const add3 = (a, b, c) => {
   return a+b+c;
 }
 
-module.exports = add;
+module.exports = { add, add3 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import add from './add';
+import sub from './sub';
 
 
 

@@ -15,6 +15,7 @@ commands:
     steps:
       - store_artifacts:
           path: coverage
+      - run: npx nyc report --reporter=text || true
       - codecov/upload:
           file: coverage/coverage-final.json
 
